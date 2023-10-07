@@ -5,14 +5,14 @@ class AstronomyPictureOfTheDay extends Equatable {
   final String date;
   final String explanation;
   final String hdurl;
-  final String titlel;
+  final String title;
 
   const AstronomyPictureOfTheDay(
       {required this.date,
       required this.explanation,
       required this.hdurl,
-      required this.titlel});
+      required this.title});
 
   @override
-  List<Object> get props => [date, explanation, hdurl, titlel];
+  List<Object> get props => [date, explanation, hdurl, title];
 }

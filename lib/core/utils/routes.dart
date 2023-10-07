@@ -1,10 +1,12 @@
+import 'package:astromars/core/binding/astronomy_pic_binding.dart';
+import 'package:astromars/features/pictureOfDay/presentation/pages/astronomy_pic_of_the_day_screen.dart';
 import 'package:astromars/features/pictureOfDay/presentation/pages/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
 class Routes {
   static const String initialRoute = '/';
-  static const String testScreen = '/testScreen';
+  static const String apodScreen = '/apodScreen';
 }
 
 class AppRoutes {
@@ -14,10 +16,10 @@ class AppRoutes {
         return GetPageRoute(
           page: () => const HomeScreen(),
         );
-      // case Routes.testScreen:
-      //   return GetPageRoute(
-      //     page: () => const TestPage(),
-      //   );
+      case Routes.apodScreen:
+        return GetPageRoute(
+            page: () => const AstronomyPicOfTheDayScreen(),
+            binding: AstronomyPicBinding());
 
       default:
         return undefindRoute();
