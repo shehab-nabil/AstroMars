@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:astromars/core/error/exceptions.dart';
 import 'package:astromars/core/utils/api.dart';
 import 'package:astromars/features/pictureOfDay/data/models/astronomy_pic_of_the_day_model.dart';
@@ -10,21 +8,12 @@ abstract class AstronomyPicOfTheDayRemoteDataSource {
 }
 
 class AstronomyPicOfTheDayRemoteDataSourceImpl
-    extends AstronomyPicOfTheDayRemoteDataSource {
+    implements AstronomyPicOfTheDayRemoteDataSource {
   @override
   Future<AstronomyPictureOfTheDayModel> getPicOfTheDay() async {
-    var dio = Dio();
-    var response = await dio.request(
-      Api.baseAPOTDUrl,
-      options: Options(
-        method: 'GET',
-      ),
-    );
-
+    final response = await Dio().get(Api.baseAPOTDUrl);
     if (response.statusCode == 200) {
-      print(json.encode(response.data));
-      return AstronomyPictureOfTheDayModel.fromJson(
-          json.decode(response.data.toString()));
+      return AstronomyPictureOfTheDayModel.fromJson(response.data);
     } else {
       throw const ServerException();
     }

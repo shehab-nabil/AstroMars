@@ -1,4 +1,4 @@
-import 'package:astromars/core/utils/colors.dart';
+import 'package:astromars/core/utils/appcolors.dart';
 import 'package:astromars/core/utils/strings.dart';
 import 'package:astromars/features/pictureOfDay/presentation/widgets/pic_of_day.dart';
 import 'package:flutter/material.dart';

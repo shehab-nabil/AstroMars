@@ -4,22 +4,22 @@ class AstronomyPictureOfTheDayModel extends AstronomyPictureOfTheDay {
   const AstronomyPictureOfTheDayModel({
     required date,
     required explanation,
-    required hdurl,
+    required url,
     required title,
-  }) : super(date: date, explanation: explanation, hdurl: hdurl, title: title);
+  }) : super(date: date, explanation: explanation, url: url, title: title);
 
   factory AstronomyPictureOfTheDayModel.fromJson(Map<String, dynamic> json) =>
       AstronomyPictureOfTheDayModel(
         date: json["date"],
         explanation: json["explanation"],
-        hdurl: json["hdurl"],
+        url: json["url"],
         title: json["title"],
       );
 
   Map<String, dynamic> toJson() => {
         "date": date,
         "explanation": explanation,
-        "hdurl": hdurl,
+        "url": url,
         "title": title,
       };
 }
