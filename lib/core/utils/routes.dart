@@ -1,12 +1,14 @@
 import 'package:astromars/core/binding/astronomy_pic_binding.dart';
 import 'package:astromars/features/pictureOfDay/presentation/pages/astronomy_pic_of_the_day_screen.dart';
 import 'package:astromars/features/pictureOfDay/presentation/pages/home_screen.dart';
+import 'package:astromars/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
 class Routes {
   static const String initialRoute = '/';
   static const String apodScreen = '/apodScreen';
+  static const String homeScreen = '/homeScreen';
 }
 
 class AppRoutes {
@@ -14,12 +16,16 @@ class AppRoutes {
     switch (routeSettings.name) {
       case Routes.initialRoute:
         return GetPageRoute(
-          page: () => const HomeScreen(),
+          page: () => const SplashScreen(),
         );
       case Routes.apodScreen:
         return GetPageRoute(
             page: () => const AstronomyPicOfTheDayScreen(),
             binding: AstronomyPicBinding());
+      case Routes.homeScreen:
+        return GetPageRoute(
+          page: () => const HomeScreen(),
+        );
 
       default:
         return undefindRoute();
