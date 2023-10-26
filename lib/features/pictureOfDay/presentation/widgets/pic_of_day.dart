@@ -27,6 +27,7 @@ class PictureOfTheDay extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
+          const SizedBox(height: 10),
           Text(
             'The Astronomy Picture of the Day '.toUpperCase(),
             style: TextStyle(

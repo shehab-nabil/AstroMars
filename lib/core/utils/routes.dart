@@ -1,4 +1,5 @@
 import 'package:astromars/core/binding/astronomy_pic_binding.dart';
+import 'package:astromars/core/binding/mars_pics_binding.dart';
 import 'package:astromars/features/Mars/presentation/pages/mars_screen.dart';
 import 'package:astromars/features/pictureOfDay/presentation/pages/astronomy_pic_of_the_day_screen.dart';
 import 'package:astromars/features/pictureOfDay/presentation/pages/home_screen.dart';
@@ -31,6 +32,7 @@ class AppRoutes {
       case Routes.marsScreen:
         return GetPageRoute(
           page: () => const MarsScreen(),
+          binding: MarsPicsBinding(),
         );
 
       default:
