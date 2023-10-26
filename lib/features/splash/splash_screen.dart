@@ -17,7 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   _startDelay() {
     _timer = Timer(
-        const Duration(seconds: 3), () => Get.offNamed(Routes.homeScreen));
+        const Duration(seconds: 4), () => Get.offNamed(Routes.homeScreen));
   }
 
   @override

@@ -5,6 +5,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fadein/flutter_fadein.dart';
 import 'package:get/get.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class AstronomyPicOfTheDayScreen extends StatelessWidget {
   const AstronomyPicOfTheDayScreen({super.key});
@@ -16,11 +17,14 @@ class AstronomyPicOfTheDayScreen extends StatelessWidget {
           init: AstronomyPicOfTheDayController(),
           builder: (controller) {
             if (controller.apotdState.isLoading()) {
-              return const SizedBox(
-                  height: 400,
-                  child: Center(
-                    child: CircularProgressIndicator(),
-                  ));
+              return Center(
+                child: LoadingAnimationWidget.discreteCircle(
+                  color: AppColors.primaryColor,
+                  size: 60,
+                  secondRingColor: AppColors.secColor,
+                  thirdRingColor: AppColors.thirdColor,
+                ),
+              );
             } else if (controller.apotdState.isSuccess()) {
               final apotd =
                   controller.apotdState.data as AstronomyPictureOfTheDay;
@@ -48,7 +52,7 @@ class AstronomyPicOfTheDayScreen extends StatelessWidget {
                               ],
                               stops: [-0.0, 0.12, 1.0, 1.0],
                             ).createShader(
-                              Rect.fromLTRB(0.0, 1.0, rect.width, rect.height),
+                              Rect.fromLTRB(0, 1.0, rect.width, rect.height),
                             );
                           },
                           blendMode: BlendMode.dstIn,
@@ -83,13 +87,14 @@ class AstronomyPicOfTheDayScreen extends StatelessWidget {
                                   horizontal: 8.0,
                                 ),
                                 decoration: BoxDecoration(
-                                  color: Colors.red,
+                                  color: AppColors.secColor,
                                   borderRadius: BorderRadius.circular(4.0),
                                 ),
                                 child: Text(
                                   apotd.date,
-                                  style: const TextStyle(
-                                      fontSize: 17, color: Colors.white),
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      color: AppColors.whiteColor),
                                 ),
                               ),
                               const SizedBox(width: 16.0)
