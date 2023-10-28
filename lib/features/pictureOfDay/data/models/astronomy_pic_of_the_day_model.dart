@@ -1,4 +1,4 @@
-import 'package:astromars/features/pictureOfDay/domain/entities/apod.dart';
+import '../../domain/entities/apod.dart';
 
 class AstronomyPictureOfTheDayModel extends AstronomyPictureOfTheDay {
   const AstronomyPictureOfTheDayModel({

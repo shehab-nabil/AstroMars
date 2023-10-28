@@ -1,10 +1,11 @@
-import 'package:astromars/core/error/exceptions.dart';
-import 'package:astromars/core/error/failure.dart';
-import 'package:astromars/features/pictureOfDay/data/datasources/astronomy_pic_od_the_day_remote_datasource.dart';
-import 'package:astromars/features/pictureOfDay/domain/entities/apod.dart';
-import 'package:astromars/features/pictureOfDay/domain/repositories/get_pic_repository.dart';
 import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
+
+import '../../../../core/error/exceptions.dart';
+import '../../../../core/error/failure.dart';
+import '../../domain/entities/apod.dart';
+import '../../domain/repositories/get_pic_repository.dart';
+import '../datasources/astronomy_pic_od_the_day_remote_datasource.dart';
 
 class AstronomyPictureOfTheDayRepositoryImpl
     implements AstronomyPictureOfTheDayRepository {

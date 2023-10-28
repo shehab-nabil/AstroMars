@@ -1,22 +1,47 @@
-import 'package:astromars/core/utils/appcolors.dart';
-import 'package:astromars/features/Mars/domain/entities/mars_pics.dart';
-import 'package:astromars/features/Mars/presentation/controller/mars_controller.dart';
-import 'package:astromars/features/Mars/presentation/widgets/pic_card.dart';
+import '../../../../core/utils/appcolors.dart';
+import '../../domain/entities/mars_pics.dart';
+import '../controller/mars_controller.dart';
+import '../widgets/pic_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
-class MarsScreen extends StatelessWidget {
+class MarsScreen extends GetView<MarsController> {
   const MarsScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
+    // DateTime? date;
     return Scaffold(
       appBar: AppBar(
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(right: 10.0),
+              child: IconButton(
+                  onPressed: () {
+                    controller.showDate();
+                  },
+                  focusColor: AppColors.thirdColor,
+                  splashColor: AppColors.thirdColor,
+                  icon: const Icon(Icons.calendar_month),
+                  color: AppColors.secColor),
+            ),
+          ],
           elevation: 0.5,
           iconTheme: IconThemeData(color: AppColors.thirdColor),
-          title: Text('Mars Photos in 2023/10/20 ',
-              style: TextStyle(color: AppColors.primaryColor)),
+          // title: Text('Mars Photos in 2023/10/20 ',
+          //     style: TextStyle(color: AppColors.primaryColor)),
+          title: GetBuilder<MarsController>(
+              init: MarsController(),
+              builder: (controller) {
+                // controller.date = date;
+                return Text(
+                  'Photos of  ${controller.date!.year} / ${controller.date!.month} / ${controller.date!.day} ',
+                  style: TextStyle(
+                      color: AppColors.primaryColor,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500),
+                );
+              }),
           backgroundColor: AppColors.whiteColor),
       body: Padding(
         padding: EdgeInsets.zero,

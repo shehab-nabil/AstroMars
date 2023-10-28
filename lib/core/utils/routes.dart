@@ -1,9 +1,9 @@
-import 'package:astromars/core/binding/astronomy_pic_binding.dart';
-import 'package:astromars/core/binding/mars_pics_binding.dart';
-import 'package:astromars/features/Mars/presentation/pages/mars_screen.dart';
-import 'package:astromars/features/pictureOfDay/presentation/pages/astronomy_pic_of_the_day_screen.dart';
-import 'package:astromars/features/pictureOfDay/presentation/pages/home_screen.dart';
-import 'package:astromars/features/splash/splash_screen.dart';
+import '../binding/astronomy_pic_binding.dart';
+import '../binding/mars_pics_binding.dart';
+import '../../features/Mars/presentation/pages/mars_screen.dart';
+import '../../features/pictureOfDay/presentation/pages/astronomy_pic_of_the_day_screen.dart';
+import '../../features/pictureOfDay/presentation/pages/home_screen.dart';
+import '../../features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 

@@ -1,5 +1,5 @@
-import 'package:astromars/core/utils/appcolors.dart';
-import 'package:astromars/core/utils/routes.dart';
+import '../../../../core/utils/appcolors.dart';
+import '../../../../core/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

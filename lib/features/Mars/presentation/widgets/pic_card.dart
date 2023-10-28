@@ -1,6 +1,5 @@
-import 'package:astromars/core/utils/appcolors.dart';
-import 'package:astromars/features/Mars/domain/entities/mars_pics.dart';
-import 'package:flutter/cupertino.dart';
+import '../../../../core/utils/appcolors.dart';
+import '../../domain/entities/mars_pics.dart';
 import 'package:flutter/material.dart';
 
 class MarsPicCard extends StatelessWidget {

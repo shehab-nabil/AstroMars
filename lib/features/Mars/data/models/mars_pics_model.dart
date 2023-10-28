@@ -1,4 +1,4 @@
-import 'package:astromars/features/Mars/domain/entities/mars_pics.dart';
+import '../../domain/entities/mars_pics.dart';
 
 class MarsPicsModel extends MarsPics {
   const MarsPicsModel(

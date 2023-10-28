@@ -1,6 +1,6 @@
-import 'package:astromars/core/utils/appcolors.dart';
-import 'package:astromars/features/pictureOfDay/domain/entities/apod.dart';
-import 'package:astromars/features/pictureOfDay/presentation/controller/astronomy_pic_controller.dart';
+import '../../../../core/utils/appcolors.dart';
+import '../../domain/entities/apod.dart';
+import '../controller/astronomy_pic_controller.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fadein/flutter_fadein.dart';

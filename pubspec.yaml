@@ -39,9 +39,11 @@ dependencies:
   flutter_fadein: ^2.0.0
   get: ^4.6.6
   internet_connection_checker: ^1.0.0+1
+  intl: ^0.18.1
   loading_animation_widget: ^1.2.0+4
   lottie: ^2.7.0
   rive: ^0.12.0
+  syncfusion_flutter_datepicker: ^23.1.42
 
 dev_dependencies:
   flutter_lints: ^2.0.0

@@ -1,7 +1,7 @@
-import 'package:astromars/core/error/failure.dart';
-import 'package:astromars/core/utils/strings.dart';
-import 'package:astromars/features/pictureOfDay/data/repositories/astronomy_pic_of_the_day_repo.dart';
-import 'package:astromars/features/pictureOfDay/presentation/controller/resource_states.dart';
+import '../../../../core/error/failure.dart';
+import '../../../../core/utils/strings.dart';
+import '../../data/repositories/astronomy_pic_of_the_day_repo.dart';
+import 'resource_states.dart';
 import 'package:get/get.dart';
 
 class AstronomyPicOfTheDayController extends GetxController {

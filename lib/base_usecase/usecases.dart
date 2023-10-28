@@ -1,4 +1,4 @@
-import 'package:astromars/core/error/failure.dart';
+import '../core/error/failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 

@@ -1,7 +1,7 @@
-import 'package:astromars/core/utils/appcolors.dart';
-import 'package:astromars/core/utils/strings.dart';
-import 'package:astromars/features/Mars/presentation/widgets/mars.dart';
-import 'package:astromars/features/pictureOfDay/presentation/widgets/pic_of_day.dart';
+import '../../../../core/utils/appcolors.dart';
+import '../../../../core/utils/strings.dart';
+import '../../../Mars/presentation/widgets/mars.dart';
+import '../widgets/pic_of_day.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {

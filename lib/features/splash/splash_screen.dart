@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:astromars/core/utils/routes.dart';
+import '../../core/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
